@@ -3,31 +3,31 @@ let searchForm = document.querySelector('.header .search-form');
 let loginForm = document.querySelector('.header .login-form');
 let contactInfo = document.querySelector('.contact-info');
 
-document.querySelector('#menu-btn').onclick = () =>{
+document.querySelector('#menu-btn').addEventListener("click", () => {
    navbar.classList.toggle('active');
    searchForm.classList.remove('active');
    loginForm.classList.remove('active');
-};
+});
 
-document.querySelector('#search-btn').onclick = () =>{
+document.querySelector('#search-btn').addEventListener("click", () => {
    searchForm.classList.toggle('active');
    navbar.classList.remove('active');
    loginForm.classList.remove('active');
-};
+});
 
-document.querySelector('#login-btn').onclick = () =>{
+document.querySelector('#login-btn')?.addEventListener("click", () => {
    loginForm.classList.toggle('active');
    navbar.classList.remove('active');
    searchForm.classList.remove('active'); 
-};
+});
 
-document.querySelector('#info-btn').onclick = () =>{
+document.querySelector('#info-btn').addEventListener("click", () => {
    contactInfo.classList.add('active');
-}
+});
 
-document.querySelector('#close-contact-info').onclick = () =>{
+document.querySelector('#close-contact-info').addEventListener("click", () => {
    contactInfo.classList.remove('active');
-}
+});
 
 window.onscroll = () =>{
    navbar.classList.remove('active');
